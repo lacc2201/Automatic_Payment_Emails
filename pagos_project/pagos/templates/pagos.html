@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recordatorio de Pagos</title>
+</head>
+<body>
+    <h2>Empresas con pagos pendientes:</h2>
+    <ul>
+        {% for empresa, meses in empresas_sin_pagos %}
+            <li>
+                {{ empresa.nombre }} - Meses: {{ meses|join:', ' }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
